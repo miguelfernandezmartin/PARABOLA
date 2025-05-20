@@ -1,1 +1,13 @@
+<script>
+    function calcularAlcance() {
+      const v0 = parseFloat(document.getElementById('velocidad').value);
+      const anguloGrados = parseFloat(document.getElementById('angulo').value);
+      const g = 9.81;
 
+      const anguloRadianes = anguloGrados * (Math.PI / 180);
+      const alcance = (Math.pow(v0, 2) * Math.sin(2 * anguloRadianes)) / g;
+
+      document.getElementById('resultado').textContent = 
+        `El alcance máximo es: ${alcance.toFixed(2)} metros.`;
+    }
+  </script>
